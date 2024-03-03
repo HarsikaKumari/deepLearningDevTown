@@ -17,3 +17,5 @@ print(0.23 + 0.23 + 0.23 + 0.23 + 0.23 + 0.23 +
       0.23 + 0.23 + 0.23 + 0.23 + 0.23 + 0.23)
 
 print(0.23*30)
+
+# concepts of Precision optimization
