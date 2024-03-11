@@ -14,3 +14,15 @@ for i in range(3):
   for j in range(3):
    axs [i, j].imshow(X_train[cnt])
    cnt += cnt
+   
+X_train = tf.keras.utils.normalize(X_train, axis = 1)
+X_test = tf.keras.utils.normalize(X_test, axis = 1)
+
+model = tf.keras.models.Sequential()
+model.add(tf.keras.layers.Flatten(input_shape = (28, 28)))
+
+model.add(tf.keras.layers.Dense(units = 128, activation = tf.nn.relu))
+model.add(tf.keras.layers.Dense(units = 128, activation = tf.nn.relu))
+
+model.add(tf.keras.layers.Dense(units = 10, activation = tf.nn.softmax))
+model.summary()
